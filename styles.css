@@ -205,13 +205,13 @@ h1, h2, h3, h4 {
   padding-top: 110px;
 }
 .hero-bg { position: absolute; inset: 0; overflow: hidden; }
-.hero-photo {
+.hero-video {
   position: absolute;
   inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
-  opacity: 0.34;
-  filter: grayscale(0.3) contrast(1.05);
+  opacity: 0.45;
+  filter: grayscale(0.15) contrast(1.05);
 }
 .hero-bg::after {
   content: '';
@@ -387,142 +387,6 @@ h1, h2, h3, h4 {
   text-transform: none;
 }
 .advantages p { margin: 0; color: var(--gray); font-size: 14.5px; }
-
-/* =============================
-   Engineering
-============================= */
-.eng-head {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-}
-.kbm-badge {
-  width: 64px; height: 64px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  box-shadow: 0 0 0 3px rgba(216,30,44,0.25);
-}
-
-.eng-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-}
-
-.milestones-image {
-  margin: 0 0 64px;
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 28px 20px 8px;
-  overflow-x: auto;
-}
-.milestones-image img { width: 100%; min-width: 720px; }
-
-.parts-gallery {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0,1fr));
-  gap: 16px;
-}
-.parts-gallery figure {
-  margin: 0;
-  background: var(--black-soft);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
-  overflow: hidden;
-  aspect-ratio: 1 / 1;
-}
-.parts-gallery img {
-  width: 100%; height: 100%;
-  object-fit: contain;
-  padding: 10px;
-  filter: grayscale(1) brightness(1.05);
-  transition: filter 0.35s var(--ease), transform 0.35s var(--ease);
-}
-.parts-gallery figure:hover img {
-  filter: grayscale(0);
-  transform: scale(1.08);
-}
-.eng-directions h3, .timeline h3 {
-  font-size: 16px;
-  color: var(--red);
-  margin-bottom: 20px;
-  letter-spacing: 0.04em;
-}
-.check-list {
-  list-style: none;
-  margin: 0 0 40px; padding: 0;
-  display: grid;
-  gap: 14px;
-}
-.check-list li {
-  padding-left: 30px;
-  position: relative;
-  color: rgba(255,255,255,0.75);
-  font-size: 15px;
-}
-.check-list li::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 4px;
-  width: 16px; height: 16px;
-  border-radius: 50%;
-  background: var(--red);
-  mask-image: none;
-}
-.check-list li::after {
-  content: '✓';
-  position: absolute;
-  left: 3px; top: 0;
-  color: var(--white);
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.spec-mini {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: rgba(255,255,255,0.12);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-.spec-mini div {
-  background: var(--black-soft);
-  padding: 18px 20px;
-}
-.spec-mini span {
-  display: block;
-  font-size: 12px;
-  color: rgba(255,255,255,0.45);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 6px;
-}
-.spec-mini strong { font-size: 15px; font-weight: 600; }
-
-.timeline ol {
-  list-style: none;
-  margin: 0; padding: 0;
-  border-left: 2px solid rgba(255,255,255,0.15);
-}
-.timeline li {
-  position: relative;
-  padding: 0 0 26px 28px;
-  color: rgba(255,255,255,0.6);
-  font-size: 15px;
-}
-.timeline li::before {
-  content: '';
-  position: absolute;
-  left: -7px; top: 2px;
-  width: 12px; height: 12px;
-  border-radius: 50%;
-  background: var(--black);
-  border: 2px solid rgba(255,255,255,0.35);
-}
-.timeline li:last-child { padding-bottom: 0; }
-.timeline-active { color: var(--white) !important; font-weight: 700; }
-.timeline-active::before { background: var(--red) !important; border-color: var(--red) !important; }
 
 /* =============================
    Models
@@ -860,7 +724,6 @@ h1, h2, h3, h4 {
   .model-specs { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .future-grid { grid-template-columns: 1fr; }
   .hero-stats { grid-template-columns: repeat(2, minmax(0,1fr)); }
-  .parts-gallery { grid-template-columns: repeat(3, minmax(0,1fr)); }
 }
 
 @media (max-width: 860px) {
@@ -883,7 +746,6 @@ h1, h2, h3, h4 {
   .burger { display: flex; }
   .form-row { grid-template-columns: 1fr; }
   .production-stats { grid-template-columns: 1fr 1fr; }
-  .eng-head { flex-direction: column; align-items: flex-start; }
 }
 
 @media (max-width: 560px) {
@@ -893,6 +755,5 @@ h1, h2, h3, h4 {
   .contact-form { padding: 28px; }
   .hero-stats { grid-template-columns: 1fr 1fr; }
   .model-card-head { flex-direction: column; align-items: flex-start; }
-  .parts-gallery { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .production-photo img { max-height: 260px; }
 }

@@ -23,7 +23,6 @@
 
     <nav class="main-nav" id="main-nav">
       <a href="#about" data-nav>О компании</a>
-      <a href="#engineering" data-nav>Инжиниринг</a>
       <a href="#models" data-nav>Модели</a>
       <a href="#production" data-nav>Производство</a>
       <a href="#contacts" data-nav>Контакты</a>
@@ -44,7 +43,9 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-bg" aria-hidden="true">
-      <img src="assets/production-cex.jpg" alt="" class="hero-photo" />
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/production-cex.jpg">
+        <source src="assets/waves.mp4" type="video/mp4" />
+      </video>
       <div class="hero-grid"></div>
       <div class="hero-glow"></div>
     </div>
@@ -139,83 +140,11 @@
     </div>
   </section>
 
-  <!-- ENGINEERING -->
-  <section class="section section-dark" id="engineering">
-    <div class="container">
-      <div class="section-head eng-head reveal">
-        <img src="assets/part-01.jpg" alt="КБМ — Конструкторское бюро молодёжи" class="kbm-badge" />
-        <div>
-          <span class="kicker">02 — Инжиниринг</span>
-          <h2>Инжиниринговый центр на базе МГТУ им. Н.Э. Баумана</h2>
-        </div>
-      </div>
-
-      <p class="lead reveal">
-        На базе Конструкторского бюро молодёжи (КБМ) МГТУ им. Н.Э. Баумана создан
-        инжиниринговый центр и испытательная лаборатория НПП «Патриот» — для
-        разработки подвесных лодочных моторов (ПЛМ) мощностью 60–80 и 130–160 л.с.
-        из отечественных комплектующих.
-      </p>
-
-      <div class="eng-grid">
-        <div class="eng-directions reveal">
-          <h3>Направления работы центра</h3>
-          <ul class="check-list">
-            <li>Разработка конструкторской и технологической документации</li>
-            <li>Изготовление опытного образца</li>
-            <li>Проведение испытаний опытно-промышленного изделия</li>
-            <li>Корректировка документации для запуска серийного производства</li>
-          </ul>
-
-          <h3>Двигатель ВАЗ‑11182 (модифицированный)</h3>
-          <div class="spec-mini">
-            <div><span>Рабочий объём</span><strong>1600 см³</strong></div>
-            <div><span>Мощность</span><strong>59 кВт при 5000 об/мин</strong></div>
-            <div><span>Крутящий момент</span><strong>135 Н·м при 3000 об/мин</strong></div>
-            <div><span>Топливо</span><strong>бензин ОЧ 92/95</strong></div>
-          </div>
-        </div>
-
-        <div class="timeline reveal">
-          <h3>Этапы ОКР</h3>
-          <ol>
-            <li><span>Техническое задание</span></li>
-            <li><span>Эскизный проект</span></li>
-            <li><span>Технический проект</span></li>
-            <li><span>Рабочий проект</span></li>
-            <li><span>Опытно‑промышленная модель</span></li>
-            <li><span>Испытания и доработка документации</span></li>
-            <li class="timeline-active"><span>2023 — изготовлен опытно‑промышленный образец</span></li>
-          </ol>
-        </div>
-      </div>
-
-      <h3 class="future-title reveal">Хронология развития</h3>
-      <div class="milestones-image reveal">
-        <img src="assets/infographic-timeline.jpg" alt="Хронология развития НПП Патриот 2016–2023" />
-      </div>
-
-      <h3 class="future-title reveal">Разработка узлов и агрегатов</h3>
-      <div class="parts-gallery reveal">
-        <figure><img src="assets/part-02.jpg" alt="3D‑модель узла двигателя" loading="lazy" /></figure>
-        <figure><img src="assets/part-03.jpg" alt="3D‑модель узла двигателя" loading="lazy" /></figure>
-        <figure><img src="assets/part-05.jpg" alt="Газораспределительный модуль" loading="lazy" /></figure>
-        <figure><img src="assets/part-06.jpg" alt="Картер маслосборника" loading="lazy" /></figure>
-        <figure><img src="assets/part-07.jpg" alt="Узел масляного насоса" loading="lazy" /></figure>
-        <figure><img src="assets/part-08.jpg" alt="Система вентиляции картера" loading="lazy" /></figure>
-        <figure><img src="assets/part-09.jpg" alt="Привод навесных агрегатов" loading="lazy" /></figure>
-        <figure><img src="assets/part-10.jpg" alt="Топливная система" loading="lazy" /></figure>
-        <figure><img src="assets/part-11.jpg" alt="Разрез мотора в сборе" loading="lazy" /></figure>
-        <figure><img src="assets/part-12.jpg" alt="Система охлаждения" loading="lazy" /></figure>
-      </div>
-    </div>
-  </section>
-
   <!-- MODELS -->
   <section class="section" id="models">
     <div class="container">
       <div class="section-head reveal">
-        <span class="kicker">03 — Модельный ряд</span>
+        <span class="kicker">02 — Модельный ряд</span>
         <h2>Моторы «Патриот»</h2>
       </div>
 
@@ -298,7 +227,7 @@
   <section class="section section-dark" id="production">
     <div class="container">
       <div class="section-head reveal">
-        <span class="kicker">04 — Производство</span>
+        <span class="kicker">03 — Производство</span>
         <h2>Серийное производство в ОЭЗ «Дубна»</h2>
       </div>
 
@@ -371,7 +300,7 @@
   <section class="section" id="contacts">
     <div class="container">
       <div class="section-head reveal">
-        <span class="kicker">05 — Контакты</span>
+        <span class="kicker">04 — Контакты</span>
         <h2>Свяжитесь с нами</h2>
       </div>
 
@@ -436,7 +365,6 @@
     </a>
     <nav class="footer-nav">
       <a href="#about">О компании</a>
-      <a href="#engineering">Инжиниринг</a>
       <a href="#models">Модели</a>
       <a href="#production">Производство</a>
       <a href="#contacts">Контакты</a>
