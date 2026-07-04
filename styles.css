@@ -258,7 +258,16 @@ h1, h2, h3, h4 {
   margin: 26px 0 40px;
   text-shadow: 0 2px 14px rgba(0,0,0,0.45);
 }
-.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 64px; }
+.hero-actions { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 64px; }
+.hero-location-tag {
+  font-family: var(--font-display);
+  color: rgba(255,255,255,0.6);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-left: 1px solid rgba(255,255,255,0.25);
+  padding-left: 16px;
+}
 
 .hero-stats {
   display: grid;
