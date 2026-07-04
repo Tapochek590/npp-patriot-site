@@ -2,16 +2,16 @@
    НПП ПАТРИОТ — design tokens
 ============================= */
 :root {
-  --black: #0b0b0c;
-  --black-soft: #141416;
-  --charcoal: #1c1c1f;
+  --black: #474b4e;
+  --black-soft: #54585c;
+  --charcoal: #63676b;
   --white: #ffffff;
   --off-white: #f6f5f3;
   --gray: #8a8a90;
   --gray-line: #e6e5e2;
-  --red: #d81e2c;
-  --red-dark: #a3121d;
-  --red-glow: rgba(216, 30, 44, 0.35);
+  --red: #cc0605;
+  --red-dark: #9c0504;
+  --red-glow: rgba(204, 6, 5, 0.35);
 
   --font-display: 'Oswald', sans-serif;
   --font-body: 'Manrope', sans-serif;
@@ -105,12 +105,12 @@ h1, h2, h3, h4 {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 500;
-  background: rgba(11,11,12,0);
+  background: rgba(71,75,78,0);
   transition: background 0.35s var(--ease), box-shadow 0.35s var(--ease), padding 0.35s var(--ease);
   padding: 22px 0;
 }
 .site-header.scrolled {
-  background: rgba(11,11,12,0.92);
+  background: rgba(71,75,78,0.92);
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.25);
   padding: 12px 0;
@@ -200,7 +200,7 @@ h1, h2, h3, h4 {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: radial-gradient(ellipse at 70% 20%, #201417 0%, var(--black) 55%), var(--black);
+  background: radial-gradient(ellipse at 70% 20%, #3c3234 0%, var(--black) 55%), var(--black);
   overflow: hidden;
   padding-top: 110px;
 }
@@ -216,8 +216,8 @@ h1, h2, h3, h4 {
 .hero-bg::after {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(100deg, rgba(11,11,12,0.82) 22%, rgba(11,11,12,0.42) 55%, rgba(11,11,12,0.12) 100%),
-              linear-gradient(to top, rgba(11,11,12,0.85) 0%, transparent 32%);
+  background: linear-gradient(100deg, rgba(71,75,78,0.82) 22%, rgba(71,75,78,0.42) 55%, rgba(71,75,78,0.12) 100%),
+              linear-gradient(to top, rgba(71,75,78,0.85) 0%, transparent 32%);
 }
 .hero-grid {
   position: absolute; inset: 0;
@@ -618,7 +618,7 @@ h1, h2, h3, h4 {
 .model-infographic::after {
   content: '';
   position: absolute; inset: 0;
-  background: linear-gradient(120deg, rgba(216,30,44,0.28), rgba(216,30,44,0.05) 45%, transparent 70%);
+  background: linear-gradient(120deg, rgba(204,6,5,0.28), rgba(204,6,5,0.05) 45%, transparent 70%);
   mix-blend-mode: multiply;
   pointer-events: none;
 }
@@ -778,8 +778,8 @@ h1, h2, h3, h4 {
   height: 100%;
   clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 50%, calc(100% - 14px) 100%, 0 100%);
 }
-.bar-1 { width: 50%; left: 0%; background: rgba(216,30,44,0.22); }
-.bar-2 { width: 25%; left: 45.8%; background: rgba(216,30,44,0.55); }
+.bar-1 { width: 50%; left: 0%; background: rgba(204,6,5,0.22); }
+.bar-2 { width: 25%; left: 45.8%; background: rgba(204,6,5,0.55); }
 .bar-3 { width: 29.2%; left: 70.8%; background: var(--black); }
 .roadmap-axis {
   display: flex;
@@ -808,7 +808,7 @@ h1, h2, h3, h4 {
 .photo-caption {
   position: absolute;
   left: 24px; bottom: 20px;
-  background: rgba(11,11,12,0.75);
+  background: rgba(71,75,78,0.75);
   backdrop-filter: blur(6px);
   color: var(--white);
   font-size: 13px;
