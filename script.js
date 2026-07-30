@@ -47,11 +47,11 @@ const revealObserver = new IntersectionObserver(
 );
 revealEls.forEach((el) => revealObserver.observe(el));
 
-// Contact form (front-end only demo submission)
+// Contact form — sends to info@npp-patriot.ru via Web3Forms
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
   const data = new FormData(form);
   const name = (data.get('name') || '').toString().trim();
@@ -62,6 +62,24 @@ form.addEventListener('submit', (e) => {
     return;
   }
 
-  status.textContent = `Спасибо, ${name}! Ваша заявка принята — мы свяжемся с вами по адресу ${email}.`;
-  form.reset();
+  const submitBtn = form.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  status.textContent = 'Отправляем...';
+
+  try {
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: data,
+    });
+
+    if (!response.ok) throw new Error('Request failed');
+
+    status.textContent = `Спасибо, ${name}! Ваша заявка отправлена — мы свяжемся с вами по адресу ${email}.`;
+    form.reset();
+  } catch (err) {
+    status.textContent = 'Не удалось отправить сообщение. Попробуйте ещё раз или напишите на info@npp-patriot.ru напрямую.';
+  } finally {
+    submitBtn.disabled = false;
+  }
 });
